@@ -1,0 +1,32 @@
+{
+    "name": "apostle/phpunit-validation",
+    "description": "Use the Symfony Validator component in PHPUnit",
+    "homepage": "https://github.com/apostle-nl/phpunit-validation",
+    "keywords": [ "phpunit", "assertion", "validation" ],
+    "license": "BSD-2-Clause",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ramon Kleiss",
+            "email": "ramon@apostle.nl"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": ">=3.7.0@stable",
+        "symfony/validator": ">=2.5,<=3.0"
+    },
+    "autoload": {
+        "classmap": [
+            "PHPUnit/"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "include_path": [
+        "",
+        "../../symfony/validator"
+    ]
+}
