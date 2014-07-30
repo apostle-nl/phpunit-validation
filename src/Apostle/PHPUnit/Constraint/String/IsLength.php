@@ -5,6 +5,8 @@ use Apostle\PHPUnit\Constraint\Constraint;
 use Symfony\Component\Validator\Constraints\Length;
 
 /**
+ * Asserts that a given string length is between some minimum and maximum value.
+ *
  * @author Ramon Kleiss <ramon@apostle.nl>
  */
 class IsLength extends Constraint
@@ -19,10 +21,11 @@ class IsLength extends Constraint
     private $charset;
 
     /**
-     * Constructor
-     *
-     * @param integer $min
-     * @param integer $max
+     * @param integer The minimum length value. The assertion will fail if the
+     *                given value's length is less than this minimum value.
+     * @param integer This required option is the maximum length value. The
+     *                assertion will fail if the given value's length is greater
+     *                than this maximum value.
      */
     public function __construct($min = 0, $max = 0)
     {

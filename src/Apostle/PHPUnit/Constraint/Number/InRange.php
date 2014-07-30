@@ -5,6 +5,8 @@ use Apostle\PHPUnit\Constraint\Constraint;
 use Symfony\Component\Validator\Constraints\Range;
 
 /**
+ * Asserts that a given number is between some minimum and maximum number.
+ *
  * @author Ramon Kleiss <ramon@apostle.nl>
  */
 class InRange extends Constraint
@@ -16,8 +18,11 @@ class InRange extends Constraint
     private $max;
 
     /**
-     * @param integer $min
-     * @param integer $max
+     * @param integer The minimum value. Assertion will fail if the tested value
+     *                is less than this minimum value.
+     * @param integer This required option is the maximum value. The assertion
+     *                will fail if the tested value is greater than this
+     *                maximum value.
      */
     public function __construct($min, $max)
     {

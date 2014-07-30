@@ -5,6 +5,8 @@ use Apostle\PHPUnit\Constraint\Constraint;
 use Symfony\Component\Validator\Constraints\Email;
 
 /**
+ * Asserts that a value is a valid email address.
+ *
  * @author Ramon Kleiss <ramon@apostle.nl>
  */
 class IsEmail extends Constraint
@@ -19,9 +21,16 @@ class IsEmail extends Constraint
     private $strict;
 
     /**
-     * @param Boolean $strict
-     * @param Boolean $host
-     * @param Boolean $mx
+     * @param Boolean When false, the email will be validated against a simple
+     *                regular expression. If true, then the
+     *                egulias/email-validator library is required to perform an
+     *                RFC compliant validation.
+     * @param Boolean If true, then the checkdnsrr PHP function will be used to
+     *                check the validity of the MX or the A or the AAAA record
+     *                of the host of the given email.
+     * @param Boolean If true, then the `checkdnsrr` PHP function will be used
+     *                to check the validity of the MX record of the host of the
+     *                given email.
      */
     public function __construct($strict = false, $host = false, $mx = false)
     {

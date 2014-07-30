@@ -5,6 +5,8 @@ use Apostle\PHPUnit\Constraint\Constraint;
 use Symfony\Component\Validator\Constraints\Url;
 
 /**
+ * Asserts that a value is a valid URL string.
+ *
  * @author Ramon Kleiss <ramon@apostle.nl>
  */
 class IsUrl extends Constraint
@@ -13,7 +15,10 @@ class IsUrl extends Constraint
     private $protocols;
 
     /**
-     * @param array $protocols
+     * @param array The protocols that will be considered to be valid. For
+     *              example, if you also need `ftp://` type URLs to be valid,
+     *              you'd pass `ftp` as a protocol. `http` and `https` are
+     *              added by default.
      */
     public function __construct(array $protocols = array())
     {

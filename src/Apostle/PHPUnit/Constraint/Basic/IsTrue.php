@@ -5,6 +5,10 @@ use Apostle\PHPUnit\Constraint\Constraint;
 use Symfony\Component\Validator\Constraints\True;
 
 /**
+ * Asserts that a value is true. Specifically, this checks to see if the value
+ * is exactly `true`, exactly the integer `1`, or exactly the string
+ * `"1"`.
+ *
  * @author Ramon Kleiss <ramon@apostle.nl>
  */
 class IsTrue extends Constraint
