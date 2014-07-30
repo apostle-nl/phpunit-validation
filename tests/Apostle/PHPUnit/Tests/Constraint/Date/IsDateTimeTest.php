@@ -12,4 +12,10 @@ class IsDateTimeTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($constraint->matches('1970-01-01 00:00:00'));
         $this->assertFalse($constraint->matches('199-01-1 1:9'));
     }
+
+    public function testToString()
+    {
+        $constraint = new IsDateTime();
+        $this->assertEquals('is a valid date and time', $constraint->toString());
+    }
 }

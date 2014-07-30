@@ -12,4 +12,10 @@ class IsEmailTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($constraint->matches('info@apostle.nl'));
         $this->assertFalse($constraint->matches('foo'));
     }
+
+    public function testToString()
+    {
+        $constraint = new IsEmail();
+        $this->assertEquals('is a valid e-mail address', $constraint->toString());
+    }
 }

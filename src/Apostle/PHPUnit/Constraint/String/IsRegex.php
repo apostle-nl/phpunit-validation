@@ -51,9 +51,9 @@ class IsRegex extends Constraint
     public function toString()
     {
         if ($this->match) {
-            return sprintf('matches the regular expression %s', $this->pattern);
+            return sprintf('matches the regular expression "%s"', $this->pattern);
         }
 
-        return sprintf('does not match the regular expression %s', $this->pattern);
+        return sprintf('does not match the regular expression "%s"', $this->pattern);
     }
 }

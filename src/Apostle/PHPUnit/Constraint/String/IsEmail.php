@@ -56,6 +56,6 @@ class IsEmail extends Constraint
      */
     public function toString()
     {
-        return 'is valid e-mail address';
+        return 'is a valid e-mail address';
     }
 }

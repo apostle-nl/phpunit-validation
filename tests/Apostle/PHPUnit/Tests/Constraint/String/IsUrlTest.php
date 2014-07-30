@@ -14,4 +14,10 @@ class IsUrlTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($constraint->matches('https://google.com'));
         $this->assertFalse($constraint->matches('feed://google.com'));
     }
+
+    public function testToString()
+    {
+        $constraint = new IsUrl();
+        $this->assertEquals('is a valid URL', $constraint->toString());
+    }
 }

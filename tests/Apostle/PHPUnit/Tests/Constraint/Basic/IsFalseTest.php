@@ -16,4 +16,10 @@ class IsFalseTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($constraint->matches('1'));
         $this->assertFalse($constraint->matches(true));
     }
+
+    public function testToString()
+    {
+        $constraint = new IsFalse();
+        $this->assertEquals('is false', $constraint->toString());
+    }
 }

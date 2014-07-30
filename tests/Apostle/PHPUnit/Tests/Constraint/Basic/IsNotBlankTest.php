@@ -13,4 +13,10 @@ class IsNotBlankTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($constraint->matches(''));
         $this->assertFalse($constraint->matches(null));
     }
+
+    public function testToString()
+    {
+        $constraint = new IsNotBlank();
+        $this->assertEquals('is not blank', $constraint->toString());
+    }
 }

@@ -12,4 +12,10 @@ class IsTimeTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($constraint->matches('00:00:00'));
         $this->assertFalse($constraint->matches('1:9'));
     }
+
+    public function testToString()
+    {
+        $constraint = new IsTime();
+        $this->assertEquals('is a valid time', $constraint->toString());
+    }
 }

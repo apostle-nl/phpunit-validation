@@ -20,4 +20,13 @@ class IsRegexTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($constraint->matches('fo'));
         $this->assertFalse($constraint->matches('foobar'));
     }
+
+    public function testToString()
+    {
+        $constraint = new IsRegex('/foo/');
+        $this->assertEquals('matches the regular expression "/foo/"', $constraint->toString());
+
+        $constraint = new IsRegex('/foo/', false);
+        $this->assertEquals('does not match the regular expression "/foo/"', $constraint->toString());
+    }
 }

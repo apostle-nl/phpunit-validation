@@ -12,4 +12,10 @@ class IsNullTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($constraint->matches(''));
         $this->assertTrue($constraint->matches(null));
     }
+
+    public function testToString()
+    {
+        $constraint = new IsNull();
+        $this->assertEquals('is null', $constraint->toString());
+    }
 }

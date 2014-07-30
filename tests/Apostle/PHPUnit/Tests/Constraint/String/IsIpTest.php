@@ -12,4 +12,10 @@ class IsIpTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($constraint->matches('192.168.2.1'));
         $this->assertFalse($constraint->matches('256.256.256.1'));
     }
+
+    public function testToString()
+    {
+        $constraint = new IsIp();
+        $this->assertEquals('is a valid IP address', $constraint->toString());
+    }
 }
