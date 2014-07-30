@@ -108,18 +108,23 @@ class ExampleTest extends TestCase
     public function testCollection()
     {
         // The collection assertion tests if a collection adheres to a specific setup
+        $data = array(
+            'foo' => array(
+                'bar' => 'lorem',
+                'baz' => array(1, 2, 3),
+                'thing' => array('something else'),
+            )
+        );
+
         $this->assertCollection(array(
             'foo' => $this->isCollection(array(
                 'bar' => $this->matchesRegex('/(lorem|ipsum)/'),
-                'baz' => $this->all(array(
-                    $this->inRange(0, 5)
-                ))
+                'baz' => array(
+                    $this->all(array($this->inRange(0, 5))),
+                    $this->elements(1, 3)
+                ),
+                'thing' => $this->elements(1, 1)
             ))
-        ), array(
-            'foo' => array(
-                'bar' => 'lorem',
-                'baz' => array(1, 2, 3)
-            )
-        ));
+        ), $data);
     }
 }

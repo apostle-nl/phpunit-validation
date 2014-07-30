@@ -44,9 +44,7 @@ class IsCollection extends Constraint
         $constraints = array();
 
         foreach ($this->fields as $k => $c) {
-            if ($c instanceof Constraint) {
-                $constraints[$k] = $c->getConstraint();
-            }
+            $constraints[$k] = $this->resolveConstraints($c);
         }
 
         return new Collection(array(
@@ -62,5 +60,16 @@ class IsCollection extends Constraint
     public function toString()
     {
         return 'matches the collection specification';
+    }
+
+    private function resolveConstraints($constraint)
+    {
+        if ($constraint instanceof Constraint) {
+            return $constraint->getConstraint();
+        }
+
+        return array_map(function ($c) {
+            return $this->resolveConstraints($c);
+        }, $constraint);
     }
 }
