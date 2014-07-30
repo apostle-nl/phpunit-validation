@@ -74,6 +74,26 @@ class FooTest extends TestCase
 An example of all the currently existing assertions can be found in the
 [example file](https://github.com/apostle-nl/phpunit-validation/blob/master/examples/example.php).
 
+## Extra
+
+It is also possible to use only a subset of the available assertions or even
+just one of the assertions provided by this library thanks to traits:
+
+```php
+<?php
+
+use Apostle\PHPUnit\Assert\Basic\Type;
+
+class FooTest extends \PHPUnit_Framework_TestCase
+{
+    public function barTest()
+    {
+        $this->assertType('integer', 1);
+    }
+}
+
+```
+
 ## License
 
 This library is licensed under the BSD 2 clause license:
