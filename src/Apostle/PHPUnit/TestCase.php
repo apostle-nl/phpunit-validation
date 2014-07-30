@@ -13,6 +13,7 @@ use Apostle\PHPUnit\Constraint\Date\IsDate;
 use Apostle\PHPUnit\Constraint\Date\IsTime;
 use Apostle\PHPUnit\Constraint\Date\IsDateTime;
 
+use Apostle\PHPUnit\Constraint\Finance\IsCurrency;
 use Apostle\PHPUnit\Constraint\Finance\IsCardScheme;
 
 use Apostle\PHPUnit\Constraint\Number\InRange;
@@ -129,6 +130,16 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
     public static function isDateTime()
     {
         return new IsDateTime();
+    }
+
+    public static function assertCurrency($value, $message = '')
+    {
+        self::assertThat($value, self::isCurrency(), $message);
+    }
+
+    public static function isCurrency()
+    {
+        return new IsCurrency();
     }
 
     public static function assertCardScheme($value, $schemes, $message = '')
