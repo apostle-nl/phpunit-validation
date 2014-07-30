@@ -21,6 +21,6 @@ class IsNotBlank extends Constraint
      */
     public function toString()
     {
-        return 'is blank';
+        return 'is not blank';
     }
 }
