@@ -9,6 +9,7 @@ use Apostle\PHPUnit\Constraint\Basic\IsNotBlank;
 use Apostle\PHPUnit\Constraint\Basic\IsNull;
 use Apostle\PHPUnit\Constraint\Basic\IsNotNull;
 
+use Apostle\PHPUnit\Constraint\Collection\All;
 use Apostle\PHPUnit\Constraint\Collection\IsCollection;
 
 use Apostle\PHPUnit\Constraint\Date\IsDate;
@@ -108,9 +109,19 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
         return new IsNotNull();
     }
 
+    public static function assertAll(array $constraints, $value, $message = '')
+    {
+        self::assertThat($value, self::all($constraints), $message);
+    }
+
+    public static function all(array $constraints)
+    {
+        return new All($constraints);
+    }
+
     public static function assertCollection(array $fields, $value, $allowMissing = false, $allowExtra = false, $message = '')
     {
-        self::assertThat($value, self::isCollection($fields))
+        self::assertThat($value, self::isCollection($fields, $allowMissing, $allowExtra), $message);
     }
 
     public static function isCollection(array $fields, $allowMissing = false, $allowExtra = false)
