@@ -56,6 +56,15 @@ class FooTest extends TestCase
             'roles' => $this->all(array($this->matchesRegex('/ROLE_(.+)/')))
         ), $data);
     }
+
+    public function testBaz()
+    {
+        $data = array('this', 'that', 'thus');
+
+        $this->assertAll(array(
+            $this->matchesRegex('/th(is|at|us)/')
+        ), $data);
+    }
 }
 ```
 
