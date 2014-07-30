@@ -4,6 +4,9 @@ The PHPUnit Validation bundle allows you to use the Symfony
 [Validator](https://github.com/symfony/validator) validation rules in PHPUnit
 tests.
 
+Some of the existing PHPUnit assertions are overloaded with Symfony validation
+rules such as the `assertTrue` and `assertFalse` assertions.
+
 ## Installation
 
 Installation is as easy as updating your `composer.json`:
