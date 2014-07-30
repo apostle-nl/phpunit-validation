@@ -25,5 +25,9 @@
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
+    },
+    "suggest": {
+        "symfony/intl": "",
+        "egulias/email-validator": "Strict (RFC compliant) email validation"
     }
 }
