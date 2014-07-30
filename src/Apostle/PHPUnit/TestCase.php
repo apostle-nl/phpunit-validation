@@ -13,6 +13,7 @@ use Apostle\PHPUnit\Constraint\Date\IsDate;
 use Apostle\PHPUnit\Constraint\Date\IsTime;
 use Apostle\PHPUnit\Constraint\Date\IsDateTime;
 
+use Apostle\PHPUnit\Constraint\Finance\PassesLuhn;
 use Apostle\PHPUnit\Constraint\Finance\IsCurrency;
 use Apostle\PHPUnit\Constraint\Finance\IsCardScheme;
 
@@ -130,6 +131,16 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
     public static function isDateTime()
     {
         return new IsDateTime();
+    }
+
+    public static function assertLuhn($value, $message = '')
+    {
+        self::assertThat($value, self::passesLuhn(), $message);
+    }
+
+    public static function passesLuhn()
+    {
+        return new PassesLuhn();
     }
 
     public static function assertCurrency($value, $message = '')
