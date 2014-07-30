@@ -1,19 +1,20 @@
 <?php
-namespace Apostle\PHPUnit\Constraint;
+namespace Apostle\PHPUnit\Constraint\Basic;
 
-use Symfony\Component\Validator\Constraints\Null;
+use Apostle\PHPUnit\Constraint\Constraint;
+use Symfony\Component\Validator\Constraints\True;
 
 /**
  * @author Ramon Kleiss <ramon@apostle.nl>
  */
-class IsNull extends Constraint
+class IsTrue extends Constraint
 {
     /**
      * {@inheritDoc}
      */
     public function getConstraint()
     {
-        return new Null();
+        return new True();
     }
 
     /**
@@ -21,6 +22,6 @@ class IsNull extends Constraint
      */
     public function toString()
     {
-        return 'is null';
+        return 'is true';
     }
 }

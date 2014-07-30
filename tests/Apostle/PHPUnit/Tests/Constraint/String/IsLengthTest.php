@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\String;
 
-use Apostle\PHPUnit\Constraint\IsLength;
+use Apostle\PHPUnit\Constraint\String\IsLength;
 
 class IsLengthTest extends \PHPUnit_Framework_TestCase
 {

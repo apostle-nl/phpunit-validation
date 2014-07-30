@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\Basic;
 
-use Apostle\PHPUnit\Constraint\IsNotBlank;
+use Apostle\PHPUnit\Constraint\Basic\IsNotBlank;
 
 class IsNotBlankTest extends \PHPUnit_Framework_TestCase
 {

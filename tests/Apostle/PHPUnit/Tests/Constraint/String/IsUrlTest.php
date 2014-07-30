@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\String;
 
-use Apostle\PHPUnit\Constraint\IsUrl;
+use Apostle\PHPUnit\Constraint\String\IsUrl;
 
 class IsUrlTest extends \PHPUnit_Framework_TestCase
 {

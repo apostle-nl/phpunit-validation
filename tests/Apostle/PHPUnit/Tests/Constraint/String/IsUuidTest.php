@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\String;
 
-use Apostle\PHPUnit\Constraint\IsUuid;
+use Apostle\PHPUnit\Constraint\String\IsUuid;
 
 class IsUuidTest extends \PHPUnit_Framework_TestCase
 {

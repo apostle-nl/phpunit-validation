@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\String;
 
-use Apostle\PHPUnit\Constraint\IsRegex;
+use Apostle\PHPUnit\Constraint\String\IsRegex;
 
 class IsRegexTest extends \PHPUnit_Framework_TestCase
 {

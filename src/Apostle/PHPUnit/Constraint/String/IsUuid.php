@@ -1,6 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Constraint;
+namespace Apostle\PHPUnit\Constraint\String;
 
+use Apostle\PHPUnit\Constraint\Constraint;
 use Symfony\Component\Validator\Constraints\Uuid;
 
 /**

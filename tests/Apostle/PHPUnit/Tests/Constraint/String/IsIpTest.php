@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\String;
 
-use Apostle\PHPUnit\Constraint\IsIp;
+use Apostle\PHPUnit\Constraint\String\IsIp;
 
 class IsIpTest extends \PHPUnit_Framework_TestCase
 {

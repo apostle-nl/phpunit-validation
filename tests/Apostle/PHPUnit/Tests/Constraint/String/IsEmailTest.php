@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\String;
 
-use Apostle\PHPUnit\Constraint\IsEmail;
+use Apostle\PHPUnit\Constraint\String\IsEmail;
 
 class IsEmailTest extends \PHPUnit_Framework_TestCase
 {

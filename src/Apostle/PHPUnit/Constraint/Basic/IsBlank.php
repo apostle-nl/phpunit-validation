@@ -1,19 +1,20 @@
 <?php
-namespace Apostle\PHPUnit\Constraint;
+namespace Apostle\PHPUnit\Constraint\Basic;
 
-use Symfony\Component\Validator\Constraints\NotNull;
+use Apostle\PHPUnit\Constraint\Constraint;
+use Symfony\Component\Validator\Constraints\Blank;
 
 /**
  * @author Ramon Kleiss <ramon@apostle.nl>
  */
-class IsNotNull extends Constraint
+class IsBlank extends Constraint
 {
     /**
      * {@inheritDoc}
      */
     public function getConstraint()
     {
-        return new NotNull();
+        return new Blank();
     }
 
     /**
@@ -21,6 +22,6 @@ class IsNotNull extends Constraint
      */
     public function toString()
     {
-        return 'is not null';
+        return 'is blank';
     }
 }

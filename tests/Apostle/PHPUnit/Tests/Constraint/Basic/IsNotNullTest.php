@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\Basic;
 
-use Apostle\PHPUnit\Constraint\IsNotNull;
+use Apostle\PHPUnit\Constraint\Basic\IsNotNull;
 
 class IsNotNullTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\Basic;
 
-use Apostle\PHPUnit\Constraint\IsType;
+use Apostle\PHPUnit\Constraint\Basic\IsType;
 
 class IsTypeTest extends \PHPUnit_Framework_TestCase
 {

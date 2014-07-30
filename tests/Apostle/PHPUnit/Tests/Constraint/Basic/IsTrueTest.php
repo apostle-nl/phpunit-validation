@@ -1,7 +1,7 @@
 <?php
-namespace Apostle\PHPUnit\Tests\Constraint;
+namespace Apostle\PHPUnit\Tests\Constraint\Basic;
 
-use Apostle\PHPUnit\Constraint\IsTrue;
+use Apostle\PHPUnit\Constraint\Basic\IsTrue;
 
 class IsTrueTest extends \PHPUnit_Framework_TestCase
 {
