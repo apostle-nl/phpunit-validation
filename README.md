@@ -71,6 +71,9 @@ class FooTest extends TestCase
 }
 ```
 
+An example of all the currently existing assertions can be found in the
+[example file](https://github.com/apostle-nl/phpunit-validation/blob/master/examples/example.php).
+
 ## License
 
 This library is licensed under the BSD 2 clause license:
