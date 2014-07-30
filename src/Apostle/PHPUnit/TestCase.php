@@ -13,6 +13,8 @@ use Apostle\PHPUnit\Constraint\Date\IsDate;
 use Apostle\PHPUnit\Constraint\Date\IsTime;
 use Apostle\PHPUnit\Constraint\Date\IsDateTime;
 
+use Apostle\PHPUnit\Constraint\Finance\IsCardScheme;
+
 use Apostle\PHPUnit\Constraint\Number\InRange;
 
 use Apostle\PHPUnit\Constraint\String\IsEmail;
@@ -127,6 +129,16 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
     public static function isDateTime()
     {
         return new IsDateTime();
+    }
+
+    public static function assertCardScheme($value, $schemes, $message = '')
+    {
+        self::assertThat($value, self::isCardScheme($schemes), $message);
+    }
+
+    public static function isCardScheme($schemes)
+    {
+        return new IsCardScheme($schemes);
     }
 
     public static function assertInRange($value, $min, $max, $message)
