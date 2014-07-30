@@ -35,6 +35,30 @@ class FooTest extends TestCase
 }
 ```
 
+This is, of course, not very exciting. The best improvements are the way you can
+validate collections. Instead of either matching an array exactly or not
+matching it at all you can use assertions _inside_ the array:
+
+```
+<?php
+
+use Apostle\PHPUnit\TestCase;
+
+class FooTest extends TestCase
+{
+    public function testBar()
+    {
+        $data = array(
+            'roles' => array('ROLE_USER', 'ROLE_ADMIN', 'ROLE_SUPER_ADMIN')
+        );
+
+        $this->assertCollection(array(
+            'roles' => $this->all(array($this->matchesRegex('/ROLE_(.+)/')))
+        ), $data);
+    }
+}
+```
+
 ## License
 
 This library is licensed under the BSD 2 clause license:
