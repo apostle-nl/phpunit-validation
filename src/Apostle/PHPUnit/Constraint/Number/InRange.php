@@ -26,6 +26,8 @@ class InRange extends Constraint
      */
     public function __construct($min, $max)
     {
+        parent::__construct();
+
         $this->min = (integer) $min;
         $this->max = (integer) $max;
     }

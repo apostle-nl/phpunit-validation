@@ -22,6 +22,8 @@ class IsUrl extends Constraint
      */
     public function __construct(array $protocols = array())
     {
+        parent::__construct();
+
         $this->protocols = array_merge(array('http', 'https'), $protocols);
     }
 

@@ -33,6 +33,8 @@ class IsRegex extends Constraint
      */
     public function __construct($pattern, $match = true)
     {
+        parent::__construct();
+
         $this->pattern = (string) $pattern;
         $this->match   = (Boolean) $match;
     }

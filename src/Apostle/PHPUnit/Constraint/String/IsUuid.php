@@ -31,6 +31,8 @@ class IsUuid extends Constraint
      */
     public function __construct($strict = false, $versions = array(1, 2, 3, 4, 5))
     {
+        parent::__construct();
+
         $this->strict   = (Boolean) $strict;
         $this->versions = $versions;
     }

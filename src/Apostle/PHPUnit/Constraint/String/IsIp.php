@@ -50,6 +50,8 @@ class IsIp extends Constraint
      */
     public function __construct($version = '4')
     {
+        parent::__construct();
+
         $this->version = (string) $version;
     }
 

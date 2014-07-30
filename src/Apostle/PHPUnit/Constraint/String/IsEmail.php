@@ -34,6 +34,8 @@ class IsEmail extends Constraint
      */
     public function __construct($strict = false, $host = false, $mx = false)
     {
+        parent::__construct();
+
         $this->strict = (Boolean) $strict;
         $this->host   = (Boolean) $host;
         $this->mx     = (Boolean) $mx;

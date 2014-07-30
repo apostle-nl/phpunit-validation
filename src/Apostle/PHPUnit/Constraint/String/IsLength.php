@@ -29,6 +29,8 @@ class IsLength extends Constraint
      */
     public function __construct($min = 0, $max = 0)
     {
+        parent::__construct();
+
         if ($min === 0 && $max === 0) {
             throw new \InvalidArgumentException('You must specify either a minimum or maximum length');
         }
