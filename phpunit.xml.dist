@@ -13,13 +13,13 @@
 
     <testsuites>
         <testsuite name="PHPUnit">
-            <directory suffix="Test.php">Tests/Constraint</directory>
+            <directory suffix="Test.php">tests/</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory suffix=".php">PHPUnit</directory>
+            <directory suffix=".php">src/</directory>
         </whitelist>
     </filter>
 </phpunit>
