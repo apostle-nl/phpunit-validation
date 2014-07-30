@@ -159,7 +159,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
         return new IsDateTime();
     }
 
-    public static function assertIban($value, $message)
+    public static function assertIban($value, $message = '')
     {
         self::assertThat($value, self::isIban(), $message);
     }
