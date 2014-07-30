@@ -1,7 +1,8 @@
 # PHPUnit Validation
 
 The PHPUnit Validation bundle allows you to use the Symfony
-[Validator](https://github.com/symfony/validator) component in PHPUnit tests.
+[Validator](https://github.com/symfony/validator) validation rules in PHPUnit
+tests.
 
 ## Installation
 
@@ -23,24 +24,13 @@ case class provider by this library instead of the default base test case:
 ```php
 <?php
 
-use Symfony\Component\Validator\Constraints as Assert;
+use Apostle\PHPUnit\TestCase;
 
-class TestCase extends \PHPUnit_Extensions_Validation_TestCase
+class FooTest extends TestCase
 {
-    public function testValidates()
+    public function testBar()
     {
-        $this->assertValidatesAgainstConstraint(
-            new Assert\Length(array('min' => 3, 'max' => 6)),
-            'foobar'
-        );
-    }
-
-    public function testNotValidates()
-    {
-        $this->assertValidatesAgainstConstraint(
-            new Assert\Length(array('min' = >3, 'max' => 6)),
-            'foobarbaz'
-        );
+        $this->assertEmail('foo@example.com');
     }
 }
 ```
