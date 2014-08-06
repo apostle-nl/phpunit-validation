@@ -82,10 +82,12 @@ just one of the assertions provided by this library thanks to traits:
 ```php
 <?php
 
-use Apostle\PHPUnit\Assert\Basic\Type;
+use Apostle\PHPUnit\Assert\Basic;
 
 class FooTest extends \PHPUnit_Framework_TestCase
 {
+    use Basic;
+
     public function barTest()
     {
         $this->assertType('integer', 1);
