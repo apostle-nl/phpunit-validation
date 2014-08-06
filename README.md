@@ -42,7 +42,7 @@ This is, of course, not very exciting. The best improvements are the way you can
 validate collections. Instead of either matching an array exactly or not
 matching it at all you can use assertions _inside_ the array:
 
-```
+```php
 <?php
 
 use Apostle\PHPUnit\TestCase;
