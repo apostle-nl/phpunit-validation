@@ -11,7 +11,7 @@ use Apostle\PHPUnit\Constraint\String\IsUuid;
 /**
  * @author Ramon Kleiss <ramon@apostle.nl>
  */
-trait String
+trait Strings
 {
     public static function assertEmail($value, $strict = false, $host = false, $mx = false, $message = '')
     {
