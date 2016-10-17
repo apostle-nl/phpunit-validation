@@ -6,7 +6,7 @@ use Apostle\PHPUnit\Constraint\Basic\IsTrue;
 /**
  * @author Ramon Kleiss <ramon@apostle.nl>
  */
-trait True
+trait Truthy
 {
     public static function assertTrue($value, $message = '')
     {
