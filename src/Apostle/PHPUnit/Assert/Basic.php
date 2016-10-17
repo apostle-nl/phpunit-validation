@@ -2,7 +2,7 @@
 namespace Apostle\PHPUnit\Assert;
 
 use Apostle\PHPUnit\Assert\Basic\Type;
-use Apostle\PHPUnit\Assert\Basic\True;
+use Apostle\PHPUnit\Assert\Basic\Truthy;
 use Apostle\PHPUnit\Constraint\Basic\IsFalse;
 use Apostle\PHPUnit\Constraint\Basic\IsBlank;
 use Apostle\PHPUnit\Constraint\Basic\IsNotBlank;
